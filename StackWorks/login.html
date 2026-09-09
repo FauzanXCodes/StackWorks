@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — sign in to your institution workspace."
+  >
+
+  <title>Sign In | StackWorks</title>
+
+  <!-- Main stylesheet (shared theme) -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <!-- Login-specific stylesheet -->
+  <link
+    rel="stylesheet"
+    href="css/login.css"
+  >
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       DECORATIVE BACKGROUND
+       ========================================================= -->
+
+  <div
+    class="bg-grid"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+
+  <header
+    class="site-header"
+    id="top"
+  >
+
+    <div class="container nav-inner">
+
+      <!-- BRAND -->
+
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="StackWorks home"
+      >
+
+        <span class="brand-mark">
+          <img
+            src="/assets/stackworks-logo.png"
+            alt="StackWorks"
+          >
+        </span>
+
+        <span class="brand-copy">
+
+          <span class="brand-name">
+            StackWorks
+          </span>
+
+          <span class="brand-tagline">
+            Education works together.
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <!-- NAVIGATION ACTIONS -->
+
+      <div class="nav-actions">
+
+        <a
+          href="index.html"
+          class="btn btn-secondary"
+        >
+          Back to Home
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       MAIN
+       ========================================================= -->
+
+  <main>
+
+    <section
+      class="auth-section"
+      id="sign-in"
+    >
+
+      <div class="container">
+
+        <!-- =====================================================
+             LOGIN CARD
+             ===================================================== -->
+
+        <div class="auth-card">
+
+          <div class="auth-head">
+
+            <span class="eyebrow">
+
+              <span
+                class="eyebrow-dot"
+                aria-hidden="true"
+              ></span>
+
+              Secure sign in
+
+            </span>
+
+
+            <h1>
+
+              Welcome back.
+
+              <span>
+                Choose how you sign in.
+              </span>
+
+            </h1>
+
+
+            <p>
+
+              Select your user type to access your
+              StackWorks workspace.
+
+            </p>
+
+          </div>
+
+
+          <!-- =================================================
+               LOGIN FORM
+               ================================================= -->
+
+          <form
+            class="auth-form"
+            id="loginForm"
+            novalidate
+          >
+
+            <!-- ROLE SELECTION -->
+
+            <fieldset class="role-fieldset">
+
+              <legend class="form-label">
+                I am a
+              </legend>
+
+
+              <div class="role-grid">
+
+
+                <!-- CHAIRMAN -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="chairman"
+                    required
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ✧
+                    </span>
+
+                    <span class="role-name">
+                      Chairman
+                    </span>
+
+                    <span class="role-desc">
+                      Platform administration
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- DEAN OF ACADEMICS -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="dean"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ⌂
+                    </span>
+
+                    <span class="role-name">
+                      Dean of Academics
+                    </span>
+
+                    <span class="role-desc">
+                      Institution administration
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- DEPARTMENT HEAD -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="department-head"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ⌘
+                    </span>
+
+                    <span class="role-name">
+                      Department Head
+                    </span>
+
+                    <span class="role-desc">
+                      Manage a department
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- FACULTY -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="faculty"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ◎
+                    </span>
+
+                    <span class="role-name">
+                      Faculty
+                    </span>
+
+                    <span class="role-desc">
+                      Teach & assess
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- STAFF -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="staff"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ⚙
+                    </span>
+
+                    <span class="role-name">
+                      Staff
+                    </span>
+
+                    <span class="role-desc">
+                      Fees, admissions, records
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- STUDENT -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="student"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ✦
+                    </span>
+
+                    <span class="role-name">
+                      Student
+                    </span>
+
+                    <span class="role-desc">
+                      Learn, practice, grow
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+                <!-- PARENT -->
+
+                <label class="role-option">
+
+                  <input
+                    type="radio"
+                    name="userType"
+                    value="parent"
+                  >
+
+                  <span class="role-card">
+
+                    <span
+                      class="role-icon"
+                      aria-hidden="true"
+                    >
+                      ⊙
+                    </span>
+
+                    <span class="role-name">
+                      Parent
+                    </span>
+
+                    <span class="role-desc">
+                      View your child's progress
+                    </span>
+
+                  </span>
+
+                </label>
+
+
+              </div>
+
+            </fieldset>
+
+
+            <!-- ROLE HINT -->
+
+            <p
+              class="role-hint"
+              id="roleHint"
+              aria-live="polite"
+            >
+              Select your user type to continue.
+            </p>
+
+
+            <!-- CREDENTIALS -->
+
+            <div class="form-field">
+
+              <label
+                class="form-label"
+                for="loginEmail"
+              >
+                Email address
+              </label>
+
+              <input
+                class="form-input"
+                id="loginEmail"
+                name="email"
+                type="email"
+                placeholder="you@institution.edu"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <div class="field-head">
+
+                <label
+                  class="form-label"
+                  for="loginPassword"
+                >
+                  Password
+                </label>
+
+                <a
+                  href="#"
+                  class="forgot-link"
+                >
+                  Forgot password?
+                </a>
+
+              </div>
+
+              <input
+                class="form-input"
+                id="loginPassword"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-large auth-submit"
+            >
+
+              Sign In
+
+              <span
+                class="btn-arrow"
+                aria-hidden="true"
+              >
+                →
+              </span>
+
+            </button>
+
+          </form>
+
+
+          <!-- VERIFICATION NOTE -->
+
+          <div class="auth-note">
+
+            <span
+              class="note-mark"
+              aria-hidden="true"
+            >
+              ✓
+            </span>
+
+            <p>
+
+              Institution access is activated only after
+              verification and approval by StackWorks.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-bottom">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+      <span>
+        Education works together.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="js/login.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
