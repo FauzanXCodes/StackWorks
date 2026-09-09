@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Staff dashboard. Fee collection, admissions, certificates, and records management."
+  >
+
+  <title>Staff Dashboard — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="staff">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Staff navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="fees.html"
+        >
+          <span class="nav-icon">
+            💰
+          </span>
+
+          Fees
+        </a>
+
+        <a
+          href="admissions.html"
+        >
+          <span class="nav-icon">
+            🎓
+          </span>
+
+          Admissions
+        </a>
+
+        <a
+          href="certificates.html"
+        >
+          <span class="nav-icon">
+            📜
+          </span>
+
+          Certificates
+        </a>
+
+        <a
+          href="records.html"
+        >
+          <span class="nav-icon">
+            📁
+          </span>
+
+          Records
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            AS
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Anita Sharma
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Staff
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                Anita Sharma
+              </span>
+            </h1>
+
+            <p>
+              Administrative Office
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Fee Collection
+            </span>
+
+            <strong>
+              ₹12.4L
+            </strong>
+
+            <small>
+              Collected this semester
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Pending Fees
+            </span>
+
+            <strong>
+              38 students
+            </strong>
+
+            <small>
+              Awaiting payment
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Certificates Pending
+            </span>
+
+            <strong>
+              7
+            </strong>
+
+            <small>
+              Awaiting approval
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              New Admissions
+            </span>
+
+            <strong>
+              14
+            </strong>
+
+            <small>
+              This week
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- PENDING FEE PAYMENTS -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Pending Fee Payments
+            </h2>
+
+            <a
+              href="fees.html"
+              class="header-link"
+            >
+              View all
+            </a>
+
+          </div>
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Student
+                  </th>
+
+                  <th>
+                    Class
+                  </th>
+
+                  <th>
+                    Amount
+                  </th>
+
+                  <th>
+                    Due Date
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Aarav Patel
+                  </td>
+
+                  <td>
+                    B.Tech CSE Sem 3
+                  </td>
+
+                  <td>
+                    ₹45,000
+                  </td>
+
+                  <td>
+                    Sep 15
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Sneha Reddy
+                  </td>
+
+                  <td>
+                    B.Tech ECE Sem 5
+                  </td>
+
+                  <td>
+                    ₹45,000
+                  </td>
+
+                  <td>
+                    Sep 15
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Paid
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Karan Singh
+                  </td>
+
+                  <td>
+                    BCA Sem 1
+                  </td>
+
+                  <td>
+                    ₹38,500
+                  </td>
+
+                  <td>
+                    Sep 20
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Priya Joshi
+                  </td>
+
+                  <td>
+                    MBA Sem 3
+                  </td>
+
+                  <td>
+                    ₹52,000
+                  </td>
+
+                  <td>
+                    Sep 15
+                  </td>
+
+                  <td>
+                    <span class="badge badge-review">
+                      Partial
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+
+        <!-- PENDING REQUESTS -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Pending Requests
+            </h2>
+
+            <a
+              href="certificates.html"
+              class="header-link"
+            >
+              View all
+            </a>
+
+          </div>
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Request Type
+                  </th>
+
+                  <th>
+                    Student
+                  </th>
+
+                  <th>
+                    Date
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Transfer Certificate
+                  </td>
+
+                  <td>
+                    Amit Kumar
+                  </td>
+
+                  <td>
+                    Sep 5
+                  </td>
+
+                  <td>
+                    <span class="badge badge-review">
+                      In Progress
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Bonafide Certificate
+                  </td>
+
+                  <td>
+                    Divya Nair
+                  </td>
+
+                  <td>
+                    Sep 4
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Ready
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Admission Confirmation
+                  </td>
+
+                  <td>
+                    Ravi Teja
+                  </td>
+
+                  <td>
+                    Sep 3
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>

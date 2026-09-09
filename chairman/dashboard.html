@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Chairman dashboard. Platform-wide overview."
+  >
+
+  <title>Chairman Dashboard — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="chairman">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Chairman navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="applications.html"
+        >
+          <span class="nav-icon">
+            📨
+          </span>
+
+          Applications
+        </a>
+
+        <a
+          href="institutions.html"
+        >
+          <span class="nav-icon">
+            🏛
+          </span>
+
+          Institutions
+        </a>
+
+        <a
+          href="users.html"
+        >
+          <span class="nav-icon">
+            👥
+          </span>
+
+          Users
+        </a>
+
+        <a
+          href="settings.html"
+        >
+          <span class="nav-icon">
+            ⚙
+          </span>
+
+          Settings
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            C
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Chairman
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Chairman
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                Chairman
+              </span>
+            </h1>
+
+            <p>
+              Platform overview
+            </p>
+
+          </div>
+
+
+          <div class="dash-topbar-actions">
+
+            <span class="preview-pill">
+              Practice
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Total Institutions
+            </span>
+
+            <strong>
+              24
+            </strong>
+
+            <small>
+              Across all regions
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Pending Applications
+            </span>
+
+            <strong>
+              7
+            </strong>
+
+            <small>
+              Awaiting review
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Active Institutions
+            </span>
+
+            <strong>
+              18
+            </strong>
+
+            <small>
+              Live on the platform
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Total Users
+            </span>
+
+            <strong>
+              3,842
+            </strong>
+
+            <small>
+              Platform-wide accounts
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- APPLICATION QUEUE -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Application Queue
+            </h2>
+
+            <a
+              href="applications.html"
+              class="header-link"
+            >
+              View all
+            </a>
+
+          </div>
+
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Institution
+                  </th>
+
+                  <th>
+                    Type
+                  </th>
+
+                  <th>
+                    Representative
+                  </th>
+
+                  <th>
+                    Applied
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Delhi Public School, Hyderabad
+                  </td>
+
+                  <td>
+                    School
+                  </td>
+
+                  <td>
+                    Rajesh Kumar
+                  </td>
+
+                  <td>
+                    Aug 12, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-review">
+                      In Review
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    IIT Madras
+                  </td>
+
+                  <td>
+                    University
+                  </td>
+
+                  <td>
+                    Dr. S. Venkat
+                  </td>
+
+                  <td>
+                    Aug 8, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    St. Xavier's College, Mumbai
+                  </td>
+
+                  <td>
+                    College
+                  </td>
+
+                  <td>
+                    Fr. David Alvares
+                  </td>
+
+                  <td>
+                    Aug 5, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Active
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Manipal Institute of Technology
+                  </td>
+
+                  <td>
+                    College
+                  </td>
+
+                  <td>
+                    Dr. Poornima Balagopalan
+                  </td>
+
+                  <td>
+                    Jul 28, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-rejected">
+                      Rejected
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Kendriya Vidyalaya, Sector 30
+                  </td>
+
+                  <td>
+                    School
+                  </td>
+
+                  <td>
+                    Anita Sharma
+                  </td>
+
+                  <td>
+                    Jul 25, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Active
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    VIT University
+                  </td>
+
+                  <td>
+                    University
+                  </td>
+
+                  <td>
+                    Dr. G. Viswanathan
+                  </td>
+
+                  <td>
+                    Jul 20, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Active
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
