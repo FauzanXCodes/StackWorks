@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Faculty dashboard. Course management, timetable, and student overview."
+  >
+
+  <title>Faculty Dashboard — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="faculty">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Faculty navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="courses.html"
+        >
+          <span class="nav-icon">
+            📚
+          </span>
+
+          My Courses
+        </a>
+
+        <a
+          href="timetable.html"
+        >
+          <span class="nav-icon">
+            🕒
+          </span>
+
+          Timetable
+        </a>
+
+        <a
+          href="attendance.html"
+        >
+          <span class="nav-icon">
+            📋
+          </span>
+
+          Attendance
+        </a>
+
+        <a
+          href="assessments.html"
+        >
+          <span class="nav-icon">
+            📝
+          </span>
+
+          Assessments
+        </a>
+
+        <a
+          href="assignments.html"
+        >
+          <span class="nav-icon">
+            📎
+          </span>
+
+          Assignments
+        </a>
+
+        <a
+          href="students.html"
+        >
+          <span class="nav-icon">
+            🎓
+          </span>
+
+          Students
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            MN
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Prof. Meera Nair
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Faculty
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                Prof. Meera Nair
+              </span>
+            </h1>
+
+            <p>
+              Computer Science Department
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              My Courses
+            </span>
+
+            <strong>
+              4
+            </strong>
+
+            <small>
+              Active this semester
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Total Students
+            </span>
+
+            <strong>
+              110
+            </strong>
+
+            <small>
+              Across all courses
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Attendance Today
+            </span>
+
+            <strong>
+              89%
+            </strong>
+
+            <small>
+              Classes marked present
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Pending Assessments
+            </span>
+
+            <strong>
+              3
+            </strong>
+
+            <small>
+              Awaiting grading
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- TODAY'S TIMETABLE -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Today's Timetable
+            </h2>
+
+            <a
+              href="timetable.html"
+              class="header-link"
+            >
+              View full week
+            </a>
+
+          </div>
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Time
+                  </th>
+
+                  <th>
+                    Course
+                  </th>
+
+                  <th>
+                    Room
+                  </th>
+
+                  <th>
+                    Type
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                    09:00 – 10:00
+                  </td>
+
+                  <td class="cell-name">
+                    Data Structures
+                  </td>
+
+                  <td>
+                    A-201
+                  </td>
+
+                  <td>
+                    Lecture
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    10:30 – 12:00
+                  </td>
+
+                  <td class="cell-name">
+                    Web Technologies
+                  </td>
+
+                  <td>
+                    C-105
+                  </td>
+
+                  <td>
+                    Tutorial
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    13:00 – 14:00
+                  </td>
+
+                  <td class="cell-name">
+                    Data Structures
+                  </td>
+
+                  <td>
+                    A-201
+                  </td>
+
+                  <td>
+                    Lab
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                    14:30 – 15:30
+                  </td>
+
+                  <td class="cell-name">
+                    DBMS
+                  </td>
+
+                  <td>
+                    B-302
+                  </td>
+
+                  <td>
+                    Lecture
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+
+        <!-- RECENT ASSESSMENTS -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Recent Assessments
+            </h2>
+
+            <a
+              href="assessments.html"
+              class="header-link"
+            >
+              View all
+            </a>
+
+          </div>
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Course
+                  </th>
+
+                  <th>
+                    Assessment
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                  <th>
+                    Due
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Data Structures
+                  </td>
+
+                  <td>
+                    Assignment 3 — Trees
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Open
+                    </span>
+                  </td>
+
+                  <td>
+                    Sep 15
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    DBMS
+                  </td>
+
+                  <td>
+                    Internal Test 1
+                  </td>
+
+                  <td>
+                    <span class="badge badge-review">
+                      Grading
+                    </span>
+                  </td>
+
+                  <td>
+                    Sep 10
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Web Technologies
+                  </td>
+
+                  <td>
+                    Quiz 2
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Closed
+                    </span>
+                  </td>
+
+                  <td>
+                    Sep 5
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
