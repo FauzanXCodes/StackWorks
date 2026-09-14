@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Examination Cell dashboard. Exam schedules, hall tickets, results and grading."
+  >
+
+  <title>Examination Cell — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="exam-cell">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Examination Cell navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="schedule.html"
+        >
+          <span class="nav-icon">
+            📅
+          </span>
+
+          Exam Schedule
+        </a>
+
+        <a
+          href="hall-tickets.html"
+        >
+          <span class="nav-icon">
+            🎫
+          </span>
+
+          Hall Tickets
+        </a>
+
+        <a
+          href="enrollment.html"
+        >
+          <span class="nav-icon">
+            📝
+          </span>
+
+          Enrollments
+        </a>
+
+        <a
+          href="results.html"
+        >
+          <span class="nav-icon">
+            🏆
+          </span>
+
+          Results
+        </a>
+
+        <a
+          href="gradebook.html"
+        >
+          <span class="nav-icon">
+            📘
+          </span>
+
+          Gradebook
+        </a>
+
+        <a
+          href="reports.html"
+        >
+          <span class="nav-icon">
+            📄
+          </span>
+
+          Reports
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            E
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Exam Cell
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Examination Cell
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                Exam Cell
+              </span>
+            </h1>
+
+            <p>
+              Mid-semester examinations · Sep 21 – Oct 5
+            </p>
+
+          </div>
+
+          <div class="dash-topbar-actions">
+
+            <button
+              class="header-btn"
+              type="button"
+            >
+              + Create Exam
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- FILTER BAR -->
+
+        <div class="filter-bar">
+
+          <span class="filter-label">
+            View
+          </span>
+
+          <select
+            class="filter-select"
+            aria-label="All departments"
+          >
+            <option>All Departments</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>MECH</option>
+            <option>MBA</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="All exams"
+          >
+            <option>All Examinations</option>
+            <option>Mid-Semester</option>
+            <option>End-Semester</option>
+            <option>Supplementary</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="All statuses"
+          >
+            <option>All Statuses</option>
+            <option>Upcoming</option>
+            <option>Ongoing</option>
+            <option>Completed</option>
+          </select>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Upcoming
+            </span>
+
+            <strong>
+              24
+            </strong>
+
+            <small>
+              Exams in next 30 days
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Ongoing
+            </span>
+
+            <strong>
+              3
+            </strong>
+
+            <small>
+              Running today
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Enrolled
+            </span>
+
+            <strong>
+              7,902
+            </strong>
+
+            <small>
+              94% of students
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Hall Tickets
+            </span>
+
+            <strong>
+              6,120
+            </strong>
+
+            <small>
+              Generated
+            </small>
+
+          </div>
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Results Published
+            </span>
+
+            <strong>
+              18
+            </strong>
+
+            <small>
+              This semester
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXAM SCHEDULE + PENDING -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                📅 Next Examinations
+              </h2>
+
+              <a
+                href="schedule.html"
+                class="header-link"
+              >
+                View schedule
+              </a>
+
+            </div>
+
+
+            <div class="dash-table-wrap">
+
+              <table class="dash-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Exam
+                    </th>
+
+                    <th>
+                      Date
+                    </th>
+
+                    <th>
+                      Room
+                    </th>
+
+                    <th>
+                      Status
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      CSE 301 · DSA
+                    </td>
+
+                    <td>
+                      Sep 21 · 10 AM
+                    </td>
+
+                    <td>
+                      Hall A
+                    </td>
+
+                    <td>
+                      <span class="badge badge-review">
+                        Upcoming
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      ECE 210 · Signals
+                    </td>
+
+                    <td>
+                      Sep 22 · 10 AM
+                    </td>
+
+                    <td>
+                      Hall B
+                    </td>
+
+                    <td>
+                      <span class="badge badge-review">
+                        Upcoming
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      MECH 220 · Thermo
+                    </td>
+
+                    <td>
+                      Sep 23 · 2 PM
+                    </td>
+
+                    <td>
+                      Hall C
+                    </td>
+
+                    <td>
+                      <span class="badge badge-review">
+                        Upcoming
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      MBA 110 · Marketing
+                    </td>
+
+                    <td>
+                      Sep 24 · 10 AM
+                    </td>
+
+                    <td>
+                      Hall D
+                    </td>
+
+                    <td>
+                      <span class="badge badge-active">
+                        Published
+                      </span>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                ⚠ Needs Action
+              </h2>
+
+              <a
+                href="hall-tickets.html"
+                class="header-link"
+              >
+                Review
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="alert-list">
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>312 hall tickets</strong>
+                    not yet issued for MECH
+                  </span>
+
+                  <a
+                    href="hall-tickets.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>84 students</strong>
+                    fee-blocked from exams
+                  </span>
+
+                  <a
+                    href="enrollment.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Result moderation</strong>
+                    pending for EEE
+                  </span>
+
+                  <a
+                    href="results.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- HALL TICKET UPLOAD -->
+
+        <h2 class="dash-section-title">
+          Bulk Import
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Hall ticket & env-exam data
+            </h2>
+
+            <a
+              href="../institution/configuration/templates/examination-staff.xlsx"
+              download
+              class="header-link"
+            >
+              Download Exam Template
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="upload-zone">
+
+              <div class="upload-zone-icon">
+                📄
+              </div>
+
+              <p>
+                Drop Excel file here
+              </p>
+
+              <p>
+                or click to browse
+              </p>
+
+              <small>
+                Supports .xlsx and .csv
+              </small>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- RESULTS OVERVIEW -->
+
+        <h2 class="dash-section-title">
+          Results Overview
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Published results this semester
+            </h2>
+
+            <a
+              href="results.html"
+              class="header-link"
+            >
+              All results
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="health-bars">
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Pass rate
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill"
+                    style="width: 89%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  89%
+                </span>
+
+              </div>
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Distinction
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill"
+                    style="width: 18%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  18%
+                </span>
+
+              </div>
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Reappear
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill warn"
+                    style="width: 11%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  11%
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>

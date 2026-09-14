@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Librarian dashboard. Catalogue, issues, returns, members and fines."
+  >
+
+  <title>Librarian Dashboard — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="librarian">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Librarian navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="catalogue.html"
+        >
+          <span class="nav-icon">
+            📚
+          </span>
+
+          Catalogue
+        </a>
+
+        <a
+          href="members.html"
+        >
+          <span class="nav-icon">
+            👥
+          </span>
+
+          Members
+        </a>
+
+        <a
+          href="issues.html"
+        >
+          <span class="nav-icon">
+            🔄
+          </span>
+
+          Issues &amp; Returns
+        </a>
+
+        <a
+          href="fines.html"
+        >
+          <span class="nav-icon">
+            💰
+          </span>
+
+          Fines
+        </a>
+
+        <a
+          href="reports.html"
+        >
+          <span class="nav-icon">
+            📄
+          </span>
+
+          Reports
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            L
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Librarian
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Librarian
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                Librarian
+              </span>
+            </h1>
+
+            <p>
+              Central Library · Open 8:00 AM – 9:00 PM
+            </p>
+
+          </div>
+
+          <div class="dash-topbar-actions">
+
+            <span class="dash-search">
+
+              <span aria-hidden="true">
+                🔍
+              </span>
+
+              <input
+                type="search"
+                placeholder="Search catalogue..."
+                aria-label="Search catalogue"
+              >
+
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Books
+            </span>
+
+            <strong>
+              42,860
+            </strong>
+
+            <small>
+              In catalogue
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Members
+            </span>
+
+            <strong>
+              7,640
+            </strong>
+
+            <small>
+              91% of students
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Issued Today
+            </span>
+
+            <strong>
+              186
+            </strong>
+
+            <small>
+              142 returned
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Overdue
+            </span>
+
+            <strong>
+              74
+            </strong>
+
+            <small>
+              Fines: ₹18,600
+            </small>
+
+          </div>
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Reserved
+            </span>
+
+            <strong>
+              112
+            </strong>
+
+            <small>
+              Awaiting pickup
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- LIBRARY HEALTH -->
+
+        <h2 class="dash-section-title">
+          Library Overview
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Circulation overview
+            </h2>
+
+            <a
+              href="issues.html"
+              class="header-link"
+            >
+              Issues &amp; returns
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="health-bars">
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Books issued
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill"
+                    style="width: 32%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  4,208
+                </span>
+
+              </div>
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Available now
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill"
+                    style="width: 68%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  60%
+                </span>
+
+              </div>
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  Return rate
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill warn"
+                    style="width: 78%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  78%
+                </span>
+
+              </div>
+
+              <div class="health-row">
+
+                <span class="health-row-label">
+                  E-books
+                </span>
+
+                <span class="health-track">
+                  <span
+                    class="health-fill"
+                    style="width: 15%"
+                  ></span>
+                </span>
+
+                <span class="health-value">
+                  15%
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- RECENT ISSUES + OVERDUE -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                🔄 Recent Activity
+              </h2>
+
+              <a
+                href="issues.html"
+                class="header-link"
+              >
+                View all
+              </a>
+
+            </div>
+
+
+            <div class="dash-table-wrap">
+
+              <table class="dash-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Book
+                    </th>
+
+                    <th>
+                      Member
+                    </th>
+
+                    <th>
+                      Type
+                    </th>
+
+                    <th>
+                      Status
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      DSA — Cormen
+                    </td>
+
+                    <td>
+                      Rahul Kumar
+                    </td>
+
+                    <td>
+                      Issue
+                    </td>
+
+                    <td>
+                      <span class="badge badge-active">
+                        Issued
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Signals &amp; Systems
+                    </td>
+
+                    <td>
+                      Farhan Ali
+                    </td>
+
+                    <td>
+                      Return
+                    </td>
+
+                    <td>
+                      <span class="badge badge-active">
+                        Returned
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Thermo — Cengel
+                    </td>
+
+                    <td>
+                      Kiran Rao
+                    </td>
+
+                    <td>
+                      Issue
+                    </td>
+
+                    <td>
+                      <span class="badge badge-review">
+                        Processing
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Marketing Mgmt
+                    </td>
+
+                    <td>
+                      Sneha Iyer
+                    </td>
+
+                    <td>
+                      Reserve
+                    </td>
+
+                    <td>
+                      <span class="badge badge-pending">
+                        Reserved
+                      </span>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                ⚠ Overdue Alerts
+              </h2>
+
+              <a
+                href="fines.html"
+                class="header-link"
+              >
+                Fines
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="alert-list">
+
+                <div class="alert-item critical">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>12 books</strong>
+                    overdue 30+ days
+                  </span>
+
+                  <a
+                    href="fines.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>28 books</strong>
+                    overdue 7–30 days
+                  </span>
+
+                  <a
+                    href="fines.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>112 reservations</strong>
+                    awaiting pickup
+                  </span>
+
+                  <a
+                    href="issues.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- NEW ARRIVALS -->
+
+        <h2 class="dash-section-title">
+          What's New
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              New arrivals this week
+            </h2>
+
+            <a
+              href="catalogue.html"
+              class="header-link"
+            >
+              Browse catalogue
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="report-grid">
+
+              <div class="report-item">
+
+                <strong>
+                  Machine Learning — Bishop
+                </strong>
+
+                <span class="report-actions">
+
+                  <span class="report-link">
+                    CSE
+                  </span>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  IoT Fundamentals
+                </strong>
+
+                <span class="report-actions">
+
+                  <span class="report-link">
+                    ECE
+                  </span>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Financial Markets — Hull
+                </strong>
+
+                <span class="report-actions">
+
+                  <span class="report-link">
+                    MBA
+                  </span>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Robotics &amp; Automation
+                </strong>
+
+                <span class="report-actions">
+
+                  <span class="report-link">
+                    MECH
+                  </span>
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>

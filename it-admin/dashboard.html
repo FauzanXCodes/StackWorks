@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — IT / System Admin dashboard. Users, roles, logs, backups and infrastructure health."
+  >
+
+  <title>IT / System Admin — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="it-admin">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="IT Admin navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="users.html"
+        >
+          <span class="nav-icon">
+            👥
+          </span>
+
+          Users
+        </a>
+
+        <a
+          href="roles.html"
+        >
+          <span class="nav-icon">
+            🛡
+          </span>
+
+          Roles &amp; Access
+        </a>
+
+        <a
+          href="logs.html"
+        >
+          <span class="nav-icon">
+            📜
+          </span>
+
+          Activity Logs
+        </a>
+
+        <a
+          href="backups.html"
+        >
+          <span class="nav-icon">
+            💾
+          </span>
+
+          Backups
+        </a>
+
+        <a
+          href="devices.html"
+        >
+          <span class="nav-icon">
+            🖥
+          </span>
+
+          Devices
+        </a>
+
+        <a
+          href="support.html"
+        >
+          <span class="nav-icon">
+            🎧
+          </span>
+
+          Support
+        </a>
+
+        <a
+          href="settings.html"
+        >
+          <span class="nav-icon">
+            ⚙
+          </span>
+
+          Settings
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            IT
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              IT Admin
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              IT / System Admin
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Welcome back,
+              <span>
+                IT Admin
+              </span>
+            </h1>
+
+            <p>
+              System status · All services operational
+            </p>
+
+          </div>
+
+          <div class="dash-topbar-actions">
+
+            <span class="preview-pill">
+              🟢 All systems operational
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATS GRID -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Users
+            </span>
+
+            <strong>
+              9,214
+            </strong>
+
+            <small>
+              <span class="trend-up">↑ 180</span> this month
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Active Sessions
+            </span>
+
+            <strong>
+              312
+            </strong>
+
+            <small>
+              Right now
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Uptime
+            </span>
+
+            <strong>
+              99.98%
+            </strong>
+
+            <small>
+              Last 30 days
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Open Tickets
+            </span>
+
+            <strong>
+              28
+            </strong>
+
+            <small>
+              4 escalated
+            </small>
+
+          </div>
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              Last Backup
+            </span>
+
+            <strong>
+              2h ago
+            </strong>
+
+            <small>
+              Automated · daily
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- SYSTEM + RECENT USERS -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                🖥 System Status
+              </h2>
+
+              <a
+                href="devices.html"
+                class="header-link"
+              >
+                Devices
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="health-bars">
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    Database
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 100%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    Operational
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    Web server
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 100%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    Operational
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    Storage
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill warn"
+                      style="width: 72%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    72% used
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    Email service
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 100%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    Operational
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                👥 Recently Created Users
+              </h2>
+
+              <a
+                href="users.html"
+                class="header-link"
+              >
+                All users
+              </a>
+
+            </div>
+
+
+            <div class="dash-table-wrap">
+
+              <table class="dash-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      User
+                    </th>
+
+                    <th>
+                      Role
+                    </th>
+
+                    <th>
+                      Status
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      neha.verma@abc.edu
+                    </td>
+
+                    <td>
+                      Faculty
+                    </td>
+
+                    <td>
+                      <span class="badge badge-active">
+                        Active
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      arjun.m@abc.edu
+                    </td>
+
+                    <td>
+                      Student
+                    </td>
+
+                    <td>
+                      <span class="badge badge-active">
+                        Active
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      ops.rashid@abc.edu
+                    </td>
+
+                    <td>
+                      Staff
+                    </td>
+
+                    <td>
+                      <span class="badge badge-review">
+                        Pending OTP
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      lib.anita@abc.edu
+                    </td>
+
+                    <td>
+                      Librarian
+                    </td>
+
+                    <td>
+                      <span class="badge badge-pending">
+                        Invited
+                      </span>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- ROLES MATRIX -->
+
+        <h2 class="dash-section-title">
+          Role Access
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Permissions summary
+            </h2>
+
+            <a
+              href="roles.html"
+              class="header-link"
+            >
+              Manage roles
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Chairman — view &amp; approve
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Principal — full operations
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Dean of Academics — configuration
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Student — self service
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ACTIVITY LOG + TICKETS -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                📜 Recent Activity
+              </h2>
+
+              <a
+                href="logs.html"
+                class="header-link"
+              >
+                View logs
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="alert-list">
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Backup completed</strong>
+                    — Sep 14, 06:00
+                  </span>
+
+                  <span class="alert-view">
+                    Success
+                  </span>
+
+                </div>
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>48 users imported</strong>
+                    — via faculty list
+                  </span>
+
+                  <span class="alert-view">
+                    Info
+                  </span>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Storage 72%</strong>
+                    — plan archive
+                  </span>
+
+                  <span class="alert-view">
+                    Warn
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                🎧 Support Tickets
+              </h2>
+
+              <a
+                href="support.html"
+                class="header-link"
+              >
+                Open tickets
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="alert-list">
+
+                <div class="alert-item critical">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Login page</strong>
+                    not loading on 3 devices
+                  </span>
+
+                  <a
+                    href="support.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Marks entry</strong>
+                    sync error in ECE
+                  </span>
+
+                  <a
+                    href="support.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>Printer setup</strong>
+                    for hall tickets
+                  </span>
+
+                  <a
+                    href="support.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
