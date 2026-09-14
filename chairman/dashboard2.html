@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="StackWorks — Chairman dashboard. Institution command center."
+  >
+
+  <title>Chairman Dashboard — StackWorks</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+
+<body data-role="chairman">
+
+  <!-- =========================================================
+       DASHBOARD LAYOUT
+       ========================================================= -->
+
+  <div class="dash-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dash-sidebar">
+
+      <!-- BRAND -->
+
+      <div class="dash-sidebar-brand">
+
+        <img
+          src="../assets/stackworks-logo.png"
+          alt="StackWorks"
+        >
+
+        <span>
+          StackWorks
+        </span>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <nav
+        class="dash-nav"
+        aria-label="Chairman navigation"
+      >
+
+        <a
+          href="dashboard.html"
+          class="active"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Overview
+        </a>
+
+        <a
+          href="applications.html"
+        >
+          <span class="nav-icon">
+            📨
+          </span>
+
+          Applications
+
+          <span class="nav-badge">
+            7
+          </span>
+        </a>
+
+        <a
+          href="institutions.html"
+        >
+          <span class="nav-icon">
+            🏛
+          </span>
+
+          Institutions
+        </a>
+
+
+        <span class="dash-nav-label">
+          Institution
+        </span>
+
+        <a
+          href="departments.html"
+        >
+          <span class="nav-icon">
+            ▤
+          </span>
+
+          Departments
+        </a>
+
+        <a
+          href="programs.html"
+        >
+          <span class="nav-icon">
+            ⌘
+          </span>
+
+          Programs
+        </a>
+
+        <a
+          href="batches.html"
+        >
+          <span class="nav-icon">
+            ⏫
+          </span>
+
+          Batches
+        </a>
+
+        <a
+          href="sections.html"
+        >
+          <span class="nav-icon">
+            ▦
+          </span>
+
+          Sections
+        </a>
+
+
+        <span class="dash-nav-label">
+          Intelligence
+        </span>
+
+        <a
+          href="students.html"
+        >
+          <span class="nav-icon">
+            👨‍🎓
+          </span>
+
+          Students
+        </a>
+
+        <a
+          href="faculty.html"
+        >
+          <span class="nav-icon">
+            👨‍🏫
+          </span>
+
+          Faculty
+        </a>
+
+        <a
+          href="academics.html"
+        >
+          <span class="nav-icon">
+            🎓
+          </span>
+
+          Academics
+        </a>
+
+        <a
+          href="finance.html"
+        >
+          <span class="nav-icon">
+            💰
+          </span>
+
+          Finance
+        </a>
+
+        <a
+          href="alerts.html"
+        >
+          <span class="nav-icon">
+            🔔
+          </span>
+
+          Alerts
+        </a>
+
+        <a
+          href="analytics.html"
+        >
+          <span class="nav-icon">
+            📊
+          </span>
+
+          Analytics
+        </a>
+
+        <a
+          href="reports.html"
+        >
+          <span class="nav-icon">
+            📄
+          </span>
+
+          Reports
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="dash-sidebar-footer">
+
+        <div class="dash-user">
+
+          <span
+            class="dash-user-avatar"
+            id="userAvatar"
+          >
+            C
+          </span>
+
+          <span class="dash-user-info">
+
+            <span
+              class="dash-user-name"
+              id="userNameSidebar"
+            >
+              Chairman
+            </span>
+
+            <span
+              class="dash-user-role"
+              id="userRoleSidebar"
+            >
+              Chairman
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <button
+          class="dash-logout"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY / TOGGLE
+         ===================================================== -->
+
+    <div
+      class="dash-sidebar-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <div class="dash-sidebar-toggle-wrap">
+
+      <button
+        class="dash-mobile-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="dash-main">
+
+      <div class="dash-main-inner">
+
+        <!-- TOPBAR -->
+
+        <div class="dash-topbar">
+
+          <div class="dash-topbar-text">
+
+            <h1>
+              Good morning,
+              <span>
+                Chairman
+              </span>
+            </h1>
+
+            <p>
+              ABC Institute of Technology · Academic Year 2026–27
+            </p>
+
+          </div>
+
+
+          <div class="dash-topbar-actions">
+
+            <span class="dash-search">
+
+              <span aria-hidden="true">
+                🔍
+              </span>
+
+              <input
+                type="search"
+                placeholder="Search students, faculty, batches..."
+                aria-label="Search"
+              >
+
+            </span>
+
+
+            <span class="preview-pill">
+              🔔 3
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- GLOBAL FILTER BAR -->
+
+        <div class="filter-bar">
+
+          <span class="filter-label">
+            View
+          </span>
+
+          <select
+            class="filter-select"
+            aria-label="All campuses"
+          >
+            <option>All Campuses</option>
+            <option>Main Campus</option>
+            <option>City Campus</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="All departments"
+          >
+            <option>All Departments</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>MECH</option>
+            <option>MBA</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="All programs"
+          >
+            <option>All Programs</option>
+            <option>B.Tech CSE</option>
+            <option>B.Tech ECE</option>
+            <option>B.Tech EEE</option>
+            <option>B.Tech MECH</option>
+            <option>MBA</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="All batches"
+          >
+            <option>All Batches</option>
+            <option>2023–27</option>
+            <option>2024–28</option>
+            <option>2025–29</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="This semester"
+          >
+            <option>This Semester</option>
+            <option>Sem 1</option>
+            <option>Sem 2</option>
+            <option>Sem 3</option>
+          </select>
+
+        </div>
+
+
+        <!-- INSTITUTION SNAPSHOT -->
+
+        <div class="dash-stat-grid">
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Students
+            </span>
+
+            <strong>
+              8,426
+            </strong>
+
+            <small>
+              <span class="trend-up">↑ 4.2%</span> vs last year
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Attendance
+            </span>
+
+            <strong>
+              87.4%
+            </strong>
+
+            <small>
+              <span class="trend-down">↓ 1.8%</span> this month
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Academics
+            </span>
+
+            <strong>
+              89.2%
+            </strong>
+
+            <small>
+              <span class="trend-up">↑ 3.4%</span> pass rate
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-green">
+
+            <span class="dash-stat-label">
+              Fees Collected
+            </span>
+
+            <strong>
+              ₹4.21 Cr
+            </strong>
+
+            <small>
+              92% of expected
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat">
+
+            <span class="dash-stat-label">
+              Faculty
+            </span>
+
+            <strong>
+              482
+            </strong>
+
+            <small>
+              96% present today
+            </small>
+
+          </div>
+
+
+          <div class="dash-stat stat-accent-orange">
+
+            <span class="dash-stat-label">
+              At Risk
+            </span>
+
+            <strong>
+              183
+            </strong>
+
+            <small>
+              <span class="trend-down">↓ 12%</span> students
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <!-- INSTITUTION HEALTH + NEEDS ATTENTION -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                🧠 Institution Health
+              </h2>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="health-grid">
+
+                <div class="health-score-box">
+
+                  <span class="health-score-num">
+                    87
+                  </span>
+
+                  <span class="health-score-label">
+                    / 100 · Healthy
+                  </span>
+
+                  <span class="health-score-note">
+                    Computed from live institution data
+                  </span>
+
+                </div>
+
+
+                <div class="health-bars">
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Academics
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill"
+                        style="width: 91%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      91
+                    </span>
+
+                  </div>
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Attendance
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill warn"
+                        style="width: 84%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      84
+                    </span>
+
+                  </div>
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Finance
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill"
+                        style="width: 93%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      93
+                    </span>
+
+                  </div>
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Faculty
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill"
+                        style="width: 86%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      86
+                    </span>
+
+                  </div>
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Students
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill warn"
+                        style="width: 82%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      82
+                    </span>
+
+                  </div>
+
+                  <div class="health-row">
+
+                    <span class="health-row-label">
+                      Operations
+                    </span>
+
+                    <span class="health-track">
+                      <span
+                        class="health-fill"
+                        style="width: 90%"
+                      ></span>
+                    </span>
+
+                    <span class="health-value">
+                      90
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                Needs Attention
+              </h2>
+
+              <a
+                href="alerts.html"
+                class="header-link"
+              >
+                View all
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="alert-list">
+
+                <div class="alert-item critical">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>₹12.8L fees overdue</strong>
+                    — 342 students have outstanding balances
+                  </span>
+
+                  <a
+                    href="finance.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>MECH 2024–28</strong>
+                    attendance dropped to 71%
+                  </span>
+
+                  <a
+                    href="batches.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item attention">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>38 students</strong>
+                    showing academic risk
+                  </span>
+
+                  <a
+                    href="students.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+                <div class="alert-item notice">
+
+                  <span class="alert-dot"></span>
+
+                  <span class="alert-text">
+                    <strong>12 faculty positions</strong>
+                    unfilled
+                  </span>
+
+                  <a
+                    href="faculty.html"
+                    class="alert-view"
+                  >
+                    View →
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- DEPARTMENT PERFORMANCE HEATMAP -->
+
+        <h2 class="dash-section-title">
+          Department Performance
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Pass rate by department &amp; batch
+            </h2>
+
+            <a
+              href="analytics.html"
+              class="header-link"
+            >
+              Analytics
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="heatmap">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Department
+                    </th>
+
+                    <th>
+                      2023–27
+                    </th>
+
+                    <th>
+                      2024–28
+                    </th>
+
+                    <th>
+                      2025–29
+                    </th>
+
+                    <th>
+                      Attendance
+                    </th>
+
+                    <th>
+                      Fees
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      CSE
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 94%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 96%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 95%
+                      </span>
+                    </td>
+
+                    <td>
+                      91%
+                    </td>
+
+                    <td>
+                      96%
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      ECE
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-medium">
+                        🟡 89%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 92%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 91%
+                      </span>
+                    </td>
+
+                    <td>
+                      87%
+                    </td>
+
+                    <td>
+                      91%
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      EEE
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-bad">
+                        🔴 78%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-medium">
+                        🟡 84%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 86%
+                      </span>
+                    </td>
+
+                    <td>
+                      82%
+                    </td>
+
+                    <td>
+                      87%
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      MECH
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-bad">
+                        🔴 76%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-bad">
+                        🔴 79%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-medium">
+                        🟡 83%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="trend-down">78%</span>
+                    </td>
+
+                    <td>
+                      82%
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      MBA
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 92%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 91%
+                      </span>
+                    </td>
+
+                    <td>
+                      <span class="heat-dot heat-good">
+                        🟢 90%
+                      </span>
+                    </td>
+
+                    <td>
+                      90%
+                    </td>
+
+                    <td>
+                      95%
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- BATCH DRILL-DOWN -->
+
+        <h2 class="dash-section-title">
+          Drill Down — Department → Program → Batch → Section
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Program &amp; batch structure
+            </h2>
+
+            <a
+              href="batches.html"
+              class="header-link"
+            >
+              View batches
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <details
+              class="tree-section"
+              open
+            >
+
+              <summary>
+
+                <span
+                  class="tree-chevron"
+                  aria-hidden="true"
+                >
+                  ›
+                </span>
+
+                <span class="tree-name">
+                  Computer Science &amp; Engineering
+                </span>
+
+                <span class="tree-meta">
+                  842 students · 91% attendance · 94% pass
+                </span>
+
+              </summary>
+
+
+              <div class="tree-body">
+
+                <details
+                  class="tree-section"
+                  open
+                >
+
+                  <summary>
+
+                    <span
+                      class="tree-chevron"
+                      aria-hidden="true"
+                    >
+                      ›
+                    </span>
+
+                    <span class="tree-name">
+                      B.Tech CSE
+                    </span>
+
+                    <span class="tree-meta">
+                      Undergraduate · 4 years
+                    </span>
+
+                  </summary>
+
+
+                  <div class="tree-section-groups">
+
+                    <div class="tree-batch">
+
+                      <div class="tree-batch-row">
+
+                        <span class="tree-batch-name">
+                          2024–28 Batch
+                        </span>
+
+                        <span class="tree-batch-meta">
+                          284 students · 92% attendance · 96% pass
+                        </span>
+
+                      </div>
+
+
+                      <div class="tree-small-group">
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-A · 94 students
+                        </a>
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-B · 96 students
+                        </a>
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-C · 94 students
+                        </a>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="tree-batch">
+
+                      <div class="tree-batch-row">
+
+                        <span class="tree-batch-name">
+                          2025–29 Batch
+                        </span>
+
+                        <span class="tree-batch-meta">
+                          282 students · 94% attendance · 95% pass
+                        </span>
+
+                      </div>
+
+
+                      <div class="tree-small-group">
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-A
+                        </a>
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-B
+                        </a>
+
+                        <a
+                          href="sections.html"
+                          class="mini-section"
+                        >
+                          CSE-C
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </details>
+
+              </div>
+
+            </details>
+
+
+            <details class="tree-section">
+
+              <summary>
+
+                <span
+                  class="tree-chevron"
+                  aria-hidden="true"
+                >
+                  ›
+                </span>
+
+                <span class="tree-name">
+                  Mechanical Engineering
+                </span>
+
+                <span class="tree-meta">
+                  568 students · 78% attendance · 79% pass
+                </span>
+
+              </summary>
+
+            </details>
+
+
+            <details class="tree-section">
+
+              <summary>
+
+                <span
+                  class="tree-chevron"
+                  aria-hidden="true"
+                >
+                  ›
+                </span>
+
+                <span class="tree-name">
+                  Management Studies
+                </span>
+
+                <span class="tree-meta">
+                  512 students · 90% attendance · 91% pass
+                </span>
+
+              </summary>
+
+            </details>
+
+          </div>
+
+        </section>
+
+
+        <!-- RISK ENGINE + FINANCE -->
+
+        <div class="dash-grid-2">
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                🧠 Student Risk Engine
+              </h2>
+
+              <a
+                href="students.html"
+                class="header-link"
+              >
+                See all
+              </a>
+
+            </div>
+
+
+            <div class="dash-table-wrap">
+
+              <table class="dash-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Student
+                    </th>
+
+                    <th>
+                      Attendance
+                    </th>
+
+                    <th>
+                      Internal
+                    </th>
+
+                    <th>
+                      Risk
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Rahul Kumar
+                    </td>
+
+                    <td class="trend-down">
+                      68%
+                    </td>
+
+                    <td>
+                      42%
+                    </td>
+
+                    <td>
+                      <span class="badge risk-high">
+                        HIGH
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Farhan Ali
+                    </td>
+
+                    <td class="trend-down">
+                      72%
+                    </td>
+
+                    <td>
+                      51%
+                    </td>
+
+                    <td>
+                      <span class="badge risk-medium">
+                        MEDIUM
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Divya Nair
+                    </td>
+
+                    <td>
+                      74%
+                    </td>
+
+                    <td>
+                      58%
+                    </td>
+
+                    <td>
+                      <span class="badge risk-medium">
+                        MEDIUM
+                      </span>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cell-name">
+                      Kiran Rao
+                    </td>
+
+                    <td>
+                      81%
+                    </td>
+
+                    <td>
+                      63%
+                    </td>
+
+                    <td>
+                      <span class="badge risk-low">
+                        LOW
+                      </span>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </section>
+
+
+          <section class="dash-card">
+
+            <div class="dash-card-header">
+
+              <h2>
+                💰 Financial Overview
+              </h2>
+
+              <a
+                href="finance.html"
+                class="header-link"
+              >
+                Finance
+              </a>
+
+            </div>
+
+
+            <div class="dash-card-body">
+
+              <div class="fin-grid">
+
+                <div class="fin-box">
+
+                  <span class="fin-label">
+                    Expected
+                  </span>
+
+                  <span class="fin-value">
+                    ₹4.58 Cr
+                  </span>
+
+                </div>
+
+                <div class="fin-box">
+
+                  <span class="fin-label">
+                    Collected
+                  </span>
+
+                  <span class="fin-value green">
+                    ₹4.21 Cr
+                  </span>
+
+                </div>
+
+                <div class="fin-box">
+
+                  <span class="fin-label">
+                    Pending
+                  </span>
+
+                  <span class="fin-value orange">
+                    ₹37.4 L
+                  </span>
+
+                </div>
+
+                <div class="fin-box">
+
+                  <span class="fin-label">
+                    Overdue
+                  </span>
+
+                  <span class="fin-value red">
+                    ₹12.8 L
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="health-bars" style="margin-top: 16px">
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    CSE
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 96%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    96%
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    ECE
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 91%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    91%
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    EEE
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill"
+                      style="width: 87%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    87%
+                  </span>
+
+                </div>
+
+                <div class="health-row">
+
+                  <span class="health-row-label">
+                    MECH
+                  </span>
+
+                  <span class="health-track">
+                    <span
+                      class="health-fill warn"
+                      style="width: 82%"
+                    ></span>
+                  </span>
+
+                  <span class="health-value">
+                    82%
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- FACULTY OVERVIEW -->
+
+        <h2 class="dash-section-title">
+          Faculty Overview
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Faculty strength by department
+            </h2>
+
+            <a
+              href="faculty.html"
+              class="header-link"
+            >
+              All faculty
+            </a>
+
+          </div>
+
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Department
+                  </th>
+
+                  <th>
+                    Faculty
+                  </th>
+
+                  <th>
+                    Students
+                  </th>
+
+                  <th>
+                    Ratio
+                  </th>
+
+                  <th>
+                    Today
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    CSE
+                  </td>
+
+                  <td>
+                    84
+                  </td>
+
+                  <td>
+                    842
+                  </td>
+
+                  <td>
+                    10 : 1
+                  </td>
+
+                  <td>
+                    96% present
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    ECE
+                  </td>
+
+                  <td>
+                    67
+                  </td>
+
+                  <td>
+                    724
+                  </td>
+
+                  <td>
+                    11 : 1
+                  </td>
+
+                  <td>
+                    94% present
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    EEE
+                  </td>
+
+                  <td>
+                    59
+                  </td>
+
+                  <td>
+                    612
+                  </td>
+
+                  <td>
+                    10 : 1
+                  </td>
+
+                  <td>
+                    93% present
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    MECH
+                  </td>
+
+                  <td>
+                    51
+                  </td>
+
+                  <td>
+                    568
+                  </td>
+
+                  <td>
+                    11 : 1
+                  </td>
+
+                  <td>
+                    90% present
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+
+        <!-- REPORTS -->
+
+        <h2 class="dash-section-title">
+          Management Reports
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              One-click reporting
+            </h2>
+
+            <a
+              href="reports.html"
+              class="header-link"
+            >
+              All reports
+            </a>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="report-grid">
+
+              <div class="report-item">
+
+                <strong>
+                  Academic Performance
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Fee Collection
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Department Comparison
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Executive Summary
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Student Strength
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+              <div class="report-item">
+
+                <strong>
+                  Placement Report
+                </strong>
+
+                <span class="report-actions">
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    PDF
+                  </a>
+
+                  <a
+                    href="#"
+                    class="report-link"
+                  >
+                    Excel
+                  </a>
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- APPLICATION QUEUE -->
+
+        <h2 class="dash-section-title">
+          Institution Applications
+        </h2>
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Application Queue
+            </h2>
+
+            <a
+              href="applications.html"
+              class="header-link"
+            >
+              View all
+            </a>
+
+          </div>
+
+
+          <div class="dash-table-wrap">
+
+            <table class="dash-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Institution
+                  </th>
+
+                  <th>
+                    Type
+                  </th>
+
+                  <th>
+                    Representative
+                  </th>
+
+                  <th>
+                    Applied
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody>
+
+                <tr>
+
+                  <td class="cell-name">
+                    Delhi Public School, Hyderabad
+                  </td>
+
+                  <td>
+                    School
+                  </td>
+
+                  <td>
+                    Rajesh Kumar
+                  </td>
+
+                  <td>
+                    Aug 12, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-review">
+                      In Review
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    IIT Madras
+                  </td>
+
+                  <td>
+                    University
+                  </td>
+
+                  <td>
+                    Dr. S. Venkat
+                  </td>
+
+                  <td>
+                    Aug 8, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-pending">
+                      Pending
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    St. Xavier's College, Mumbai
+                  </td>
+
+                  <td>
+                    College
+                  </td>
+
+                  <td>
+                    Fr. David Alvares
+                  </td>
+
+                  <td>
+                    Aug 5, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Active
+                    </span>
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td class="cell-name">
+                    VIT University
+                  </td>
+
+                  <td>
+                    University
+                  </td>
+
+                  <td>
+                    Dr. G. Viswanathan
+                  </td>
+
+                  <td>
+                    Jul 20, 2026
+                  </td>
+
+                  <td>
+                    <span class="badge badge-active">
+                      Active
+                    </span>
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+
+        <!-- PERMISSIONS -->
+
+        <section class="dash-card">
+
+          <div class="dash-card-header">
+
+            <h2>
+              Chairman Permissions
+            </h2>
+
+          </div>
+
+
+          <div class="dash-card-body">
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                View institution-wide data
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Approve / export reports
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+              <span class="perm-yes">
+                ✓
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Edit student records
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Enter attendance / marks
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+            </div>
+
+            <div class="perm-row">
+
+              <span class="perm-name">
+                Configure institution setup
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+              <span class="perm-no">
+                —
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer class="dash-footer">
+
+    <div class="dash-footer-inner">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        StackWorks.
+        All rights reserved.
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script
+    src="../js/dashboard.js"
+    defer
+  ></script>
+
+</body>
+
+</html>
